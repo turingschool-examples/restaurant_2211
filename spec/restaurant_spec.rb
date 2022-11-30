@@ -24,8 +24,6 @@ RSpec.describe Restaurant do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       expect(restaurant.closing_time(8)).to eq("18:00")
 
-      expect(restaurant).to respond_to(:add_dish).with(1).argument
-
       @restaurant1.add_dish('Burrata')
       @restaurant1.add_dish('Pizzetta')
       @restaurant1.add_dish('Ravioli')
