@@ -37,10 +37,10 @@ class Restaurant
     am_pm = ""
     time = closing_time(hours)
 
-    if (@opening_time.chars[0, @opening_time.index(":")].join.to_i) + hours < 12 == true
+    if (time.chars[0, time.index(":")].join.to_i) < 12 == true
         am_pm = "AM"
     else
-        time = (time.chars[0, @opening_time.index(":")].join.to_i - 12 + hours).to_s + ":00"
+        time = (time.chars[0, time.index(":")].join.to_i - 12).to_s + ":00"
         am_pm = "PM"
         return "#{@name} will be closing at #{time}#{am_pm}"
     end
