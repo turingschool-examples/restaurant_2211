@@ -46,8 +46,8 @@ RSpec.describe Restaurant do
     it 'can express being open for lunch' do
       restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
       restaurant2 = Restaurant.new('16:00', 'Il Posto')
-      expect(restaurant1.open_for_lunch?).to eq (false)
-      expect(restaurant2.open_for_lunch?).to eq (true)
+      expect(restaurant1.open_for_lunch?).to eq (true)
+      expect(restaurant2.open_for_lunch?).to eq (false)
     end
 
     
