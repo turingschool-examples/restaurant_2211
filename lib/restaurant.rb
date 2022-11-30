@@ -31,7 +31,5 @@ class Restaurant
         elsif @opening_time.to_i + hour > 12
             "Il Posto will be closing at #{@opening_time.to_i + hour - 12}:00PM" 
         end
-    end
-
-    
+    end 
 end
