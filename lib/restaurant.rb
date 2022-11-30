@@ -20,7 +20,11 @@ class Restaurant
         dishes << dish
     end
 
-    #def open_for_lunch?
-     #   if opening_time.delete_suffix(":00").to_i
-    #end
+    def open_for_lunch?
+       if opening_time.slice(0..1).to_i < 12
+            return true
+        else
+            return false
+        end
+    end
 end
