@@ -1,6 +1,8 @@
 require 'rspec'
 require 'pry'
 require './lib/restaurant'
+require 'time'
+#Time.strptime("10pm", "%I%P").strftime("%H:%M")
 
 RSpec.describe Restaurant do
   describe 'Iteration 1' do
@@ -12,7 +14,7 @@ RSpec.describe Restaurant do
       expect(restaurant.name).to eq('Fuel Cafe')
     end
 
-    xit 'Starts with an empty array of dishes' do
+    it 'Starts with an empty array of dishes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
       expect(restaurant.dishes).to eq([])
@@ -20,16 +22,26 @@ RSpec.describe Restaurant do
   end
 
   describe 'Iteration 2' do
-    xit 'returns closing time' do
+    it 'returns closing time' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       expect(restaurant.closing_time(8)).to eq("18:00")
+   end
 
-      @restaurant1.add_dish('Burrata')
-      @restaurant1.add_dish('Pizzetta')
-      @restaurant1.add_dish('Ravioli')
+    it 'can add dishes' do
+      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+      
+      restaurant.add_dish('Burrata')
+      restaurant.add_dish('Pizzetta')
+      restaurant.add_dish('Ravioli')
 
-      expect(@restaurant1.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
+      expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
+  end
+  describe 'Iteration 3' do
+    it 'is open for lunch' do
+      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+      expect(restaurant.open_for_lunch?).to eq(true)
+   end
 
     xit 'can add dishes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
