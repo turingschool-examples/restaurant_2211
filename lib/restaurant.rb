@@ -5,4 +5,8 @@ class Restaurant
     @name = name
     @dishes = []
   end
+
+  def closing_time(hours)
+    @opening_time
+  end
 end
