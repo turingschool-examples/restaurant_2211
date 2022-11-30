@@ -51,5 +51,22 @@ RSpec.describe Restaurant do
 
       expect(restaurant.menu_dish_names).to eq(['BURRATA', 'PIZZETTA', 'RAVIOLI'])
     end
+
+    it 'returns all caps menu dish names' do
+      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+      
+      restaurant.add_dish('Burrata')
+      restaurant.add_dish('Pizzetta')
+      restaurant.add_dish('Ravioli')
+
+      expect(restaurant.menu_dish_names).to eq(['BURRATA', 'PIZZETTA', 'RAVIOLI'])
+    end
+    
+    it 'can announces closing time' do
+      restaurant1 = Restaurant.new('6:00', 'Fuel Cafe')
+
+      expect(restaurant1.announce_closing_time(5)).to eq("#{restaurant1.name} will be closing at 11:00AM")
+      expect(restaurant1.announce_closing_time(10)).to eq("#{restaurant1.name} will be closing at 11:00PM")
+     end
   end
 end
