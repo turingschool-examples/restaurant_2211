@@ -16,4 +16,13 @@ attr_reader :name, :opening_time, :dishes, :closing_time
     @dishes << dish
   end
   
+  def open_for_lunch?
+    @opening_time.chop.chop.chop.to_i < 12
+  end
+
+  def menu_dish_names
+    menu = []
+    @dishes.each {|dish| menu << dish.upcase}
+    return menu 
+  end
 end
