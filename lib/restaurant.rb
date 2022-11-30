@@ -37,4 +37,18 @@ class Restaurant
         return menu_names
     end 
 
+    def announce_closing_time(time)
+        
+        raw_closing_time_as_i = ((opening_time.to_i)+time)
+      
+        if  raw_closing_time_as_i < 12 
+            announce_time = (raw_closing_time_as_i.to_s).concat(":00AM")
+
+        elsif raw_closing_time_as_i >= 12 
+            announce_time = ((raw_closing_time_as_i-12).to_s).concat(":00PM")
+            end 
+
+        return "#{@name} will be closing at #{announce_time}"
+    end 
+ 
 end
