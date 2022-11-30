@@ -36,9 +36,14 @@ RSpec.describe Restaurant do
       expect(restaurant2).to be_a(Restaurant)
     end
 
-    xit 'returns closing time' do
+    it 'returns closing time restaurant1' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       expect(restaurant.closing_time(8)).to eq("18:00")
+    end
+
+    it 'returns closing time restaurant2' do
+      restaurant2 = Restaurant.new('16:00', 'Il Poggio')
+      expect(restaurant2.closing_time(7)).to eq("23:00")
     end
 
     xit 'returns closing time' do
