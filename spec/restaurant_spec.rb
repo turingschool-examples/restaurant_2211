@@ -4,7 +4,7 @@ require './lib/restaurant'
 
 RSpec.describe Restaurant do
   describe 'Iteration 1' do
-    it 'Exists and has attributes' do
+    it 'exists and has attributes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
       expect(restaurant).to be_a(Restaurant)
@@ -12,7 +12,7 @@ RSpec.describe Restaurant do
       expect(restaurant.name).to eq('Fuel Cafe')
     end
 
-    it 'Starts with an empty array of dishes' do
+    it 'starts with an empty array of dishes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
       expect(restaurant.dishes).to eq([])
@@ -23,9 +23,11 @@ RSpec.describe Restaurant do
     it 'returns closing time' do
       restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
       restaurant2 = Restaurant.new('16:00', 'Il Poggio')
+
+      expect(restaurant1).to be_a(Restaurant)
+      expect(restaurant2).to be_a(Restaurant)
       expect(restaurant1.closing_time(8)).to eq("18:00")
       expect(restaurant2.closing_time(7)).to eq("23:00")
-
     end
 
     it 'can add dishes' do
@@ -46,7 +48,7 @@ RSpec.describe Restaurant do
       restaurant2 = Restaurant.new('16:00', 'Il Posto')
       
       expect(restaurant1.open_for_lunch?).to be true
-      expect(restaurant2.open_for_lunch?). to be false
+      expect(restaurant2.open_for_lunch?).to be false
     end
 
     it 'writes dish names in all caps' do
