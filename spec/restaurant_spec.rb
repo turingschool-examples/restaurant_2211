@@ -26,8 +26,12 @@ RSpec.describe Restaurant do
   end
 
   describe 'Iteration 2' do
-    it 'exists and has attributes' do
+    it 'exists and has attributes restaurant1' do
       restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+    end
+
+    it 'exists and has attributes restaurant2' do
+      restaurant2 = Restaurant.new('16:00', 'Il Poggio')
     end
 
     xit 'returns closing time' do
