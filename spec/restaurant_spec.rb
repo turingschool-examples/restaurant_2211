@@ -40,6 +40,16 @@ RSpec.describe Restaurant do
     it 'checks if open for lunch' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       expect(restaurant.open_for_lunch?).to eq(true)
-   end
+    end
+
+    it 'returns all caps menu dish names' do
+      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+      
+      restaurant.add_dish('Burrata')
+      restaurant.add_dish('Pizzetta')
+      restaurant.add_dish('Ravioli')
+
+      expect(restaurant.menu_dish_names).to eq(['BURRATA', 'PIZZETTA', 'RAVIOLI'])
+    end
   end
 end
