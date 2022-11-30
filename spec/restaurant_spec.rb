@@ -18,7 +18,6 @@ RSpec.describe Restaurant do
 
       expect(restaurant.dishes).to eq([])
     end
-
   end
 
   describe 'Iteration 2' do
@@ -68,14 +67,6 @@ RSpec.describe Restaurant do
 
       expect(restaurant1.announce_closing_time(5)).to eq("Fuel Cafe will be closing at 11:00AM")
       expect(restaurant2.announce_closing_time(7)).to eq("Il Posto will be closing at 11:00PM")
-
     end
-
   end
-
-
-
-
-
-
 end
