@@ -35,4 +35,13 @@ class Restaurant
       dish.upcase 
     end
   end
+
+  def announce_closing_time(hours)
+    closing_time(hours) 
+    format = Time.parse(closing_time(hours))
+    closing_at = format.strftime('%I:%M%p')
+
+    "#{@name} will be closing at #{closing_at}"
+    
+  end
 end
