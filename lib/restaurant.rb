@@ -26,11 +26,9 @@ class Restaurant
         @dishes << dish
     end
 
-   #def open_for_lunch?
-    #    if @opening_time <= "12:00"
-     #       true
-      #  else
-       # end
-    #end
+   def open_for_lunch?
+        @opening_time < "12:00"
+   end
+    
 
 end
