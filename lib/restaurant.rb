@@ -25,4 +25,9 @@ attr_reader :name, :opening_time, :dishes, :closing_time
     @dishes.each {|dish| menu << dish.upcase}
     return menu 
   end
+
+  def announce_closing_time
+    closing_time = @opening_time.chop.chop.chop.to_i + hours_after_opening_time
+
+  end
 end

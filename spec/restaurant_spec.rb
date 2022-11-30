@@ -17,6 +17,7 @@ RSpec.describe Restaurant do
 
       expect(restaurant.dishes).to eq([])
     end
+
   end
 
   describe 'Iteration 2' do
@@ -41,7 +42,8 @@ RSpec.describe Restaurant do
       expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
 
-    it 'ask if open for lunch' do
+  describe 'Iteration 3' do
+    it 'ask if open for lunch and create a menu' do
       restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
       restaurant2 = Restaurant.new('16:00', 'Il Posto')
 
@@ -53,8 +55,23 @@ RSpec.describe Restaurant do
       restaurant2.add_dish('Ravioli')
 
       expect(restaurant2.menu_dish_names).to eq(["BURRATA", "PIZZETTA", "RAVIOLI"])
+    end
+  end
+
+  describe 'Iteration 4' do
+
+    it 'can announce closing time' do
+      restaurant1 = Restaurant.new('6:00', 'Fuel Cafe')
+      restaurant2 = Restaurant.new('16:00', 'Il Posto')
+
+      expect(restaurant1.announce_closing_time(5)).to eq("Fuel Cafe will be closing at 11:00AM")
+      expect(restaurant2.announce_closing_time(7)).to eq("Il Posto will be closing at 11:00PM")
 
     end
+
+  end
+
+
 
 
 
