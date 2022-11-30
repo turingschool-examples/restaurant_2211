@@ -8,11 +8,12 @@ class Restaurant
     @opening_time = opening_time
     @name = name
     @dishes = []
-    
-  end
+    # require 'pry'; binding.pry
 
-  def closing_time(hours)
-    (@opening_time.to_i) + (hours) + ':00'
   end
-require 'pry'; binding.pry
+  
+  def closing_time(hours)
+    "#{hours + @opening_time.chomp(':00').to_i}:00"
+  end
+  
 end
