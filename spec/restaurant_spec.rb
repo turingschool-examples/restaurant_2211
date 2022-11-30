@@ -23,20 +23,7 @@ RSpec.describe Restaurant do
     it 'returns closing time' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       expect(restaurant.closing_time(8)).to eq("18:00")
-
-      # @restaurant1.add_dish('Burrata')
-      # @restaurant1.add_dish('Pizzetta')
-      # @restaurant1.add_dish('Ravioli') 
-
-         # Not sure if I am allowed to comment this out.
-         # It seems there are two tests for add dish
-         # this one is failing, it is calling add dish on 
-         # the restaurant1 object. In this test, there is only a
-         # restaurant object
-         # the other test for 'can add dishes' passes though
-
-      #expect(@restaurant1.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
-    end
+    end 
 
     it 'can add dishes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
