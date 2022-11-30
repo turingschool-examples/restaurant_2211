@@ -35,4 +35,10 @@ RSpec.describe Restaurant do
       expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
   end
+
+  #describe 'Iteration 3' do
+  #  restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+  #  restaurant2 = Restaurant.new('16:00', 'I1 Posto')
+
+  #end
 end
