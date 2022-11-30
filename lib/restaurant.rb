@@ -12,7 +12,9 @@ class Restaurant
     open_int = opening_time.to_i
     closed = open_int + hours_of_op
     "#{closed}:00"
-    
   end
-            
+
+  def add_dish(dish)
+    @dishes << dish
+  end
 end
