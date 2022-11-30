@@ -19,4 +19,10 @@ class Restaurant
   def open_for_lunch?
     opening_time < '16:00'
   end
+
+  def announce_closing_time(hours_open)
+    if closing_time > 12
+    closing_time -= 12
+    end
+  end
 end
