@@ -18,8 +18,9 @@ describe Restaurant do
   end
 
   describe 'Iteration 2' do
-    xit 'returns closing time' do
-      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+    it 'returns closing time' do
+      restaurant1 = Restaurant.new([], '10:00', 'Fuel Cafe')
+      restaurant2 = Restaurant.new([], '16:00', 'Il Poggio')
       expect(restaurant.closing_time(8)).to eq("18:00")
    end
 
