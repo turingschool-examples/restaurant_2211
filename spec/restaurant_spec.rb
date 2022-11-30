@@ -68,5 +68,4 @@ RSpec.describe Restaurant do
       expect(restaurant2.announce_closing_time(7)).to eq("Il Posto will be closing at 11:00PM")
     end
   end
-
 end
