@@ -19,4 +19,6 @@ class Restaurant
     @opening_time.to_i < 12 ? true : false
   end
 
+  
+
 end
