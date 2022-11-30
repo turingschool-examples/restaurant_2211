@@ -64,10 +64,15 @@ RSpec.describe Restaurant do
       restaurant2 = Restaurant.new('16:00', 'Il Posto')
     end
 
-    it 'exists and has attributes restaurant1' do
+    it 'is open for lunch restaurant1' do
       restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
       expect(restaurant1.open_for_lunch?).to eq(true)
     end
 
+    it 'is open for lunch restaurant2' do
+      restaurant2 = Restaurant.new('16:00', 'Il Posto')
+      expect(restaurant2.open_for_lunch?).to eq(false)
+    end
+    
   end
 end
