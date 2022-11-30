@@ -4,13 +4,15 @@ class Restaurant
      :name, 
      :dishes, 
      :hours_past_open,
-     :closing_time
+     :closing_time,
+     :menu_dish_names
 
     def initialize(opening_time, name)
         @opening_time = opening_time
         @name = name
         @dishes = []
         @closing_time = ""
+        @menu_dish_names = []
     end
   
     def closing_time(hours_past_open)
@@ -28,6 +30,12 @@ class Restaurant
             then true
         else
             false
+        end
+    end
+
+    def menu_dish_names
+        @menu_dish_names = @dishes.map do |dish|
+            dish.upcase
         end
     end
 end
