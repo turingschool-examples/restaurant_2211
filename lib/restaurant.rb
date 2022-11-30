@@ -8,7 +8,7 @@ class Restaurant
     end
 
     def closing_time(time)
-        (10 + time).to_s + ":00"
+        (@opening_time.to_i + time).to_s + ":00"
 
 
     end
