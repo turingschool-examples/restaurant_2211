@@ -5,7 +5,7 @@
 - Clone this repo
 - remove the turingschool remote
 - remove the git history and initialize a new git repo (rm -rf .git && git init)
-- create a branch called spec
+- create a branch called harness
 - commit the Gemfile, spec directory, and, optionally, the remainder of the README
 - Create a new repo on turingschool-examples called `restaurant_<cohort number>`
 - Add that remote
