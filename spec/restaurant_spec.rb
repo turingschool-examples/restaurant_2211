@@ -54,5 +54,15 @@ RSpec.describe Restaurant do
 
       expect(restaurant2.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
+
+    it 'can return an all-caps menu array/list' do
+      restaurant2 = Restaurant.new('16:00', 'I1 Posto')
+
+      restaurant2.add_dish('Burrata')
+      restaurant2.add_dish('Pizzetta')
+      restaurant2.add_dish('Ravioli')
+
+      expect(restaurant2.menu_dish_names).to eq(['BURRATA', 'PIZZETTA', 'RAVIOLI'])
+    end
   end
 end
