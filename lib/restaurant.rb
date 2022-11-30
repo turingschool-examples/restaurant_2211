@@ -14,4 +14,7 @@ class Restaurant
     return "#{closing_time}:00"
   end
 
+  def add_dish(dish)
+    @dishes << dish
+  end 
 end
