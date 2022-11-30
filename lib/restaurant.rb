@@ -8,7 +8,6 @@ class Restaurant
     @opening_time = opening_time
     @name = name
     @dishes = []
-    # require 'pry'; binding.pry
 
   end
   
@@ -28,5 +27,10 @@ class Restaurant
       false
     end 
   end
-  # require 'pry'; binding.pry
+  
+  def menu_dish_names
+    @dishes.each do |dish|
+      dish.upcase
+    end
+  end
 end
