@@ -45,7 +45,7 @@ RSpec.describe Restaurant do
     expect(restaurant1.open_for_lunch?).to be true
     expect(restaurant2.open_for_lunch?).to be false 
   end
-end 
+ 
 
     it 'adds dishes and capitalizes them' do 
     restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
@@ -56,5 +56,6 @@ end
 
     expect(restaurant2.menu_dish_names).to eq (["BURRATA", "PIZZETTA", "RAVIOLI"])
     end 
+  end
 
 end 
