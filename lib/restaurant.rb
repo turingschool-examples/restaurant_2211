@@ -27,4 +27,13 @@ class Restaurant
         end
     end
 
+    def announce_closing_time(hours)
+        if @opening_time.to_i < 12
+            "#{@name} will be closing at #{@opening_time.to_i + hours}:00AM"
+        else
+            "#{@name} will be closing at #{(@opening_time.to_i + hours) - 12}:00PM"
+        end  
+    end
+
+
 end
