@@ -5,6 +5,7 @@ class Restaurant
      :dishes, 
      :hours_past_open,
      :closing_time
+
     def initialize(opening_time, name)
         @opening_time = opening_time
         @name = name
@@ -20,5 +21,13 @@ class Restaurant
 
     def add_dish(dish_name)
         @dishes << dish_name
+    end
+
+    def open_for_lunch?
+        if @opening_time[0..1].to_i <= 12
+            then true
+        else
+            false
+        end
     end
 end
