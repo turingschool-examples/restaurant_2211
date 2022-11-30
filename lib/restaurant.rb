@@ -1,5 +1,5 @@
 class Restaurant
-    attr_reader :opening_time, :name, :dishes, :closing_time, :add_dish
+    attr_reader :opening_time, :name, :dishes, :closing_time, :add_dish, :open_for_lunch
   def initialize(opening_time, name)
     @opening_time = opening_time
     @name = name
@@ -12,5 +12,9 @@ class Restaurant
 
   def add_dish(dish)
     @dishes << dish
+  end
+
+  def open_for_lunch?
+    opening_time < '16:00'
   end
 end
