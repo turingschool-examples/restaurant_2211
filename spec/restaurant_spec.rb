@@ -23,15 +23,9 @@ RSpec.describe Restaurant do
     xit 'returns closing time' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       expect(restaurant.closing_time(8)).to eq("18:00")
+   end
 
-      @restaurant1.add_dish('Burrata')
-      @restaurant1.add_dish('Pizzetta')
-      @restaurant1.add_dish('Ravioli')
-
-      expect(@restaurant1.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
-    end
-
-    xit 'can add dishes' do
+    it 'can add dishes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       
       restaurant.add_dish('Burrata')
@@ -39,6 +33,24 @@ RSpec.describe Restaurant do
       restaurant.add_dish('Ravioli')
 
       expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
+    end
+
+    it 'can check for open at lunch' do
+      restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+      restaurant2 = Restaurant.new('16:00', 'Il Posto')
+
+      expect(restaurant1.open_for_lunch).to eq(true)
+      expect(restaurant2.open_for_lunch).to eq(false)
+
+    end
+
+    it 'can return dish menu' do
+      restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+      restaurant2 = Restaurant.new('16:00', 'Il Posto')
+      restaurant2.add_dish('Burrata')
+      restaurant2.add_dish('Pizzetta')
+      restaurant2.add_dish('Ravioli')
+      expect(restaurant2.menu_dish_names).to eq(["BURRATA", "PIZZETTA", "RAVIOLI"])
     end
   end
 end
