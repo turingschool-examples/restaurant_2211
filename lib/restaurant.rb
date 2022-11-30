@@ -18,6 +18,7 @@ class Restaurant
 
   def open_for_lunch
     @open_time.to_i < 12
+    
   end
 
   def menu_dish_names

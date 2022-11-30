@@ -21,37 +21,41 @@ RSpec.describe Restaurant do
 
   describe 'Iteration 2' do
     it 'returns closing time' do
-      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
-      expect(restaurant.closing_time(8)).to eq("18:00")
+      restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+      restaurant2 = Restaurant.new('16:00', 'Il Poggio')
+      expect(restaurant1.closing_time(8)).to eq("18:00")
+      expect(restaurant2.closing_time(7)).to eq("23:00")
 
     end
 
     it 'can add dishes' do
-      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+      restaurant1 = Restaurant.new('10:00',' Fuel Cafe')
+      restaurant2 = Restaurant.new('16:00', 'Il Poggio')
       
-      restaurant.add_dish('Burrata')
-      restaurant.add_dish('Pizzetta')
-      restaurant.add_dish('Ravioli')
+      restaurant2.add_dish('Burrata')
+      restaurant2.add_dish('Pizzetta')
+      restaurant2.add_dish('Ravioli')
 
-      expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
+      expect(restaurant2.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
   end
 
   describe 'Iteration 3'
     it 'open for lunch?' do
-      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
-      restaurant = Restaurant.new('16:00', 'Il Posto')
-
-      expect(restaurant.open_for_lunch).to eq(true)
+      restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+      restaurant2 = Restaurant.new('16:00', 'Il Posto')
+    
+      expect(restaurant1.open_for_lunch).to eq(true)
     end
 
     it 'menu_dish_names' do
-      restaurant = Restaurant.new('16:00', 'Il Posto')
+      restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+      restaurant2 = Restaurant.new('16:00', 'Il Posto')
 
-      restaurant.add_dish('Burrata')
-      restaurant.add_dish('Pizzetta')
-      restaurant.add_dish('Ravioli')
+      restaurant2.add_dish('Burrata')
+      restaurant2.add_dish('Pizzetta')
+      restaurant2.add_dish('Ravioli')
 
-      expect(restaurant.menu_dish_names).to eq(["BURRATA", "PIZZETTA", "RAVIOLI"])
+      expect(restaurant2.menu_dish_names).to eq(["BURRATA", "PIZZETTA", "RAVIOLI"])
     end
 end
