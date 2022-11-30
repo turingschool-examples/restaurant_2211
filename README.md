@@ -30,7 +30,9 @@ pry(main)> restaurant.dishes
 
 ## Iteration 2
 
-For iteration 2, we have created all of the tests you will need - unskip tests one by one, making each pass before moving on the the next test.  The tests will model the interaction pattern below.  The `closing_time` method should add the number of hours sent in the argument to the `opening_time` and return the time in 24 hour format.  For example, 3:00 PM (12hour / clock time) is 15:00 (24hour). A restaurant will only ever open at the top of the hour (:00).
+For iteration 2, we have created all of the tests you will need - unskip tests one by one, making each pass before moving on the the next test.  The tests will model the interaction pattern below. 
+
+The `closing_time` method should add the number of hours sent in the argument to the `opening_time` and return the time in 24 hour format.  For example, 3:00 PM (12hour / clock time) is 15:00 (24hour). A restaurant will only ever open at the top of the hour (:00).
 
 ```ruby  
 pry(main)> require './lib/restaurant'
