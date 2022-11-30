@@ -3,7 +3,7 @@ class Restaurant
     def initialize(opening_time, name)
         @opening_time = opening_time
         @name = name
-
+        @dishes = []
     end
 
     def opening_time
@@ -12,6 +12,10 @@ class Restaurant
 
     def name
         @name
+    end
+    
+    def dishes
+        @dishes 
     end
 
 
