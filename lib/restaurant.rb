@@ -32,4 +32,9 @@ class Restaurant
     end
     p capitalized_dish_names
   end
+
+  def announce_closing_time(hours)
+    time = @opening_time.to_i + hours
+    
+  end
 end
