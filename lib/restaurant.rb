@@ -23,6 +23,12 @@ class Restaurant
     @dishes.map { |dish| dish.upcase }
   end
 
-  
+  def announce_closing_time(hours_open)
+    if (@opening_time.to_i + hours_open) < 12
+      "#{self.name} will be closing at #{(@opening_time.to_i + hours_open).to_s.concat(":00")}AM"
+    else 
+      "#{self.name} will be closing at #{((@opening_time.to_i + hours_open)-12).to_s.concat(":00")}PM"
+    end
+  end
 
 end
