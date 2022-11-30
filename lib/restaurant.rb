@@ -16,4 +16,10 @@ class Restaurant
   def add_dish(dish)
     dishes << dish
   end
+
+  def open_for_lunch?
+    if opening_time.to_i < 12 then true
+    else false
+    end
+  end 
 end
