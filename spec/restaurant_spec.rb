@@ -60,10 +60,25 @@ RSpec.describe Restaurant do
       expect(restaurant2.opening_time).to eq('16:00')
       expect(restaurant2.name).to eq('Il Posto')
     end
-    
+
+    it 'Exists and has attributes' do
+      restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+    expect(restaurant1.open_for_lunch?) == true
+    end
+
     it 'Exists and has attributes' do
       restaurant2 = Restaurant.new('16:00', 'Il Posto')
-    expect(restaurant1.open_for_lunch?)
+    expect(restaurant2.open_for_lunch?) == true
+    end
+
+    it 'can add dishes' do
+      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+      
+      restaurant.add_dish('Burrata')
+      restaurant.add_dish('Pizzetta')
+      restaurant.add_dish('Ravioli')
+
+      expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
 
   end
 end
