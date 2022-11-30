@@ -35,4 +35,8 @@ RSpec.describe Restaurant do
       expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
   end
+
+  describe 'Iteration 3' do
+  
+  end
 end
