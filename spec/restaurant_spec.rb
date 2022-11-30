@@ -66,7 +66,7 @@ RSpec.describe Restaurant do
       restaurant1 = Restaurant.new('6:00', 'Fuel Cafe')
 
       expect(restaurant1.announce_closing_time(5)).to eq("#{restaurant1.name} will be closing at 11:00AM")
-      expect(restaurant1.announce_closing_time(10)).to eq("#{restaurant1.name} will be closing at 11:00PM")
+      expect(restaurant1.announce_closing_time(10)).to eq("#{restaurant1.name} will be closing at 4:00PM")
      end
   end
 end
