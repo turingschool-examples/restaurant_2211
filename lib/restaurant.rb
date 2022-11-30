@@ -25,8 +25,14 @@ class Restaurant
   def open_for_lunch? 
     if (opening_time.to_i * 100) < 1200 
       true
-    else 
+    elsif (opening_time.to_i * 100) > 1200  || ((opening_time.chars.last(2).join) != ("00"))
       false
+    end
+  end
+
+  def menu_dish_names 
+    @dishes.map do |dish| 
+      dish.upcase 
     end
   end
 end
