@@ -11,7 +11,11 @@ class Restaurant
     end
 
     def closing_time(time)
-        open = opening_time.slice(0..1).to_i
+        if opening_time.size == 5
+            open = opening_time.slice(0..1).to_i
+        else
+            open = opening_time.slice(0).to_i
+        end
         close = open + time
         return "#{close}:00"
     end
@@ -21,10 +25,18 @@ class Restaurant
     end
 
     def open_for_lunch?
-       if opening_time.slice(0..1).to_i < 12
-            return true
+        if opening_time.size == 5
+            if opening_time.slice(0..1).to_i < 12
+                return true
+            else
+                return false
+            end
         else
-            return false
+            if opening_time.slice(0).to_i < 12
+                return true
+            else
+                return false
+            end
         end
     end
 
