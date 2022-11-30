@@ -7,6 +7,20 @@ class Restaurant
     end
 end
 
-def closing_time(closing_time)
-    @closing_time = "#{1 + closing_time.to_s}:00"
+def closing_time(hours)
+    @closing_time = "#{hours + @opening_time.to_s}:00"
+    
+end
+
+def add_dish(dish)
+    @dishes << dish
+end
+
+def add_dish(dish)
+    @dishes << dish
+end
+# require 'pry'; binding.pry
+
+def menu_dish_names(dish)
+    @opening_time < '12:00' 
 end
