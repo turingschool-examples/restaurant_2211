@@ -32,4 +32,19 @@ class Restaurant
 
     return upcase_dishes
   end
+
+  def announce_closing_time(hours)
+    am_pm = ""
+    time = closing_time(hours)
+
+    if (@opening_time.chars[0, @opening_time.index(":")].join.to_i) + hours < 12 == true
+        am_pm = "AM"
+    else
+        time = (time.chars[0, @opening_time.index(":")].join.to_i - 12 + hours).to_s + ":00"
+        am_pm = "PM"
+        return "#{@name} will be closing at #{time}#{am_pm}"
+    end
+
+    return "#{@name} will be closing at #{closing_time(hours)}#{am_pm}"
+  end
 end
