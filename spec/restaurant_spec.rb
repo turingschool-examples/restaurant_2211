@@ -3,6 +3,7 @@ require 'pry'
 require './lib/restaurant'
 
 RSpec.describe Restaurant do
+
   describe 'Iteration 1' do
     it 'Exists and has attributes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
@@ -41,6 +42,7 @@ RSpec.describe Restaurant do
 
       expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
+  end
 
   describe 'Iteration 3' do
     it 'ask if open for lunch and create a menu' do
@@ -75,5 +77,5 @@ RSpec.describe Restaurant do
 
 
 
-  end
+
 end
