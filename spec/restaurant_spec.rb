@@ -65,4 +65,17 @@ RSpec.describe Restaurant do
       expect(restaurant2.menu_dish_names).to eq(['BURRATA', 'PIZZETTA', 'RAVIOLI'])
     end
   end
+
+  describe 'Iteration 4' do
+    it 'Exists and has attributes' do
+      restaurant1 = Restaurant.new('6:00', 'Fuel Cafe')
+      restaurant2 = Restaurant.new('16:00', 'I1 Posto')
+
+      expect(restaurant1).to be_a(Restaurant)
+      expect(restaurant2).to be_a(Restaurant)
+
+      expect(restaurant1.announce_closing_time(5)).to eq('Fuel Cafe will be closing at 11:00AM')
+      expect(restaurant2.announce_closing_time(7)).to eq('I1 Posto will be closing at 11:00PM')
+    end
+  end
 end

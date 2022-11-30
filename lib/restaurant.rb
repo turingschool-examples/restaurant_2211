@@ -35,4 +35,20 @@ class Restaurant
         end
         return menu
     end
+
+    def announce_closing_time(hours)
+        if opening_time.size == 5
+            close_hours = opening_time.slice(0..1).to_i + hours
+        else
+            close_hours = opening_time.slice(0).to_i + hours
+        end
+
+        if close_hours > 12
+            converted = "#{close_hours-12}:00PM"
+        else
+            converted = "#{close_hours}:00AM"
+        end
+
+        return "#{name} will be closing at #{converted}"
+    end
 end
