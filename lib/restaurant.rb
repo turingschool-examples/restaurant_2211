@@ -5,4 +5,13 @@ class Restaurant
     @opening_time = opening_time
     @name = name
   end
+
+#   def opening_time(time)
+#     restaurant.opening_time
+#   end
+
+#   def name(restaurant_name)
+#     restaurant.restaurant_name
+#   end
+
 end

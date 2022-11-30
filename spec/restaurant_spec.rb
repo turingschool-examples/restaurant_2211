@@ -12,6 +12,13 @@ RSpec.describe Restaurant do
       expect(restaurant.name).to eq('Fuel Cafe')
     end
 
+    it 'Exists and has attributes' do
+      restaurant = Restaurant.new('11:30', 'Fuel Cafe')
+
+      expect(restaurant).to be_a(Restaurant)
+      expect(restaurant.opening_time).to eq('11:30')
+    end
+
     xit 'Starts with an empty array of dishes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
