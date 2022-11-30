@@ -27,4 +27,15 @@ class Restaurant
         @upcase_dishes
     end
 
+    def announce_closing_time(time_open)
+        time_closed = @opening_time.to_i + time_open
+        if time_closed < 12
+            "#{@name} will be closing at #{time_closed}:00AM"
+        else
+            standard_time = time_closed - 12           
+            "#{@name} will be closing at #{standard_time}:00PM"
+        end
+
+    end
+
 end
