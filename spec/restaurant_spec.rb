@@ -4,21 +4,21 @@ require './lib/restaurant'
 
 
 RSpec.describe Restaurant do
-  # describe 'Iteration 1' do
-  #   it 'Exists and has attributes' do
-  #     restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+  describe 'Iteration 1' do
+    it 'Exists and has attributes' do
+      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
-  #     expect(restaurant).to be_a(Restaurant)
-  #     expect(restaurant.opening_time).to eq('10:00')
-  #     expect(restaurant.name).to eq('Fuel Cafe')
-  #   end
+      expect(restaurant).to be_a(Restaurant)
+      expect(restaurant.opening_time).to eq('10:00')
+      expect(restaurant.name).to eq('Fuel Cafe')
+    end
 
-  #   it 'Starts with an empty array of dishes' do
-  #     restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+    it 'Starts with an empty array of dishes' do
+      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
-  #     expect(restaurant.dishes).to eq([])
-  #   end
-  # end
+      expect(restaurant.dishes).to eq([])
+    end
+  end
 
   describe 'Iteration 2' do
     it 'returns closing time' do
@@ -33,8 +33,28 @@ RSpec.describe Restaurant do
       restaurant.add_dish('Burrata')
       restaurant.add_dish('Pizzetta')
       restaurant.add_dish('Ravioli')
-
       expect(restaurant.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
   end
-end
+
+  describe 'Iteration 3'do 
+    it 'returns opening and closing' do 
+    restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+    restaurant2 = Restaurant.new('16:00', 'Il Posto')
+
+    expect(restaurant1.open_for_lunch?).to be true
+    expect(restaurant2.open_for_lunch?).to be false 
+  end
+end 
+
+    it 'adds dishes and capitalizes them' do 
+    restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+    restaurant2 = Restaurant.new('16:00', 'Il Posto')
+    restaurant2.add_dish('Burrata')
+    restaurant2.add_dish('Pizzetta')
+    restaurant2.add_dish('Ravioli')
+
+    expect(restaurant2.menu_dish_names).to eq (["BURRATA", "PIZZETTA", "RAVIOLI"])
+    end 
+
+end 
