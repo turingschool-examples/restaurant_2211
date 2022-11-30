@@ -1,5 +1,5 @@
 class Restaurant
-    attr_reader :opening_time, :name, :dishes, :closing_time
+    attr_reader :opening_time, :name, :dishes, :closing_time, :add_dish
 
   def initialize(opening_time, name)
     @opening_time = opening_time
@@ -12,8 +12,8 @@ class Restaurant
     "#{sum.to_s}:00"
   end
 
-  def add_dish()
-    @dishes << add_dish
+  def add_dish(dish)
+    @dishes << dish
   end
 
 end
