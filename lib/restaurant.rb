@@ -16,5 +16,12 @@ class Restaurant
 
   def add_dish(dish)
     @dishes << dish
-  end 
+  end
+
+  def open_for_lunch?
+    if @opening_time.chars[0, @opening_time.index(":")].join.to_i < 12
+        return true
+    end
+    false
+  end
 end
