@@ -20,16 +20,10 @@ RSpec.describe Restaurant do
   end
 
   describe 'Iteration 2' do
-    xit 'returns closing time' do
+    it 'returns closing time' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       expect(restaurant.closing_time(8)).to eq("18:00")
-
-      @restaurant1.add_dish('Burrata')
-      @restaurant1.add_dish('Pizzetta')
-      @restaurant1.add_dish('Ravioli')
-
-      expect(@restaurant1.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
-    end
+   end
 
     xit 'can add dishes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
