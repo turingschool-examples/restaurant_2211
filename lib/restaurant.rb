@@ -1,5 +1,4 @@
 require 'time'
-require 'date'
 
 class Restaurant
   attr_reader :name, :opening_time, :dishes
@@ -21,5 +20,13 @@ class Restaurant
 
   def add_dish(new_dish)
     @dishes << new_dish
+  end
+
+  def open_for_lunch? 
+    if (opening_time.to_i * 100) < 1200 
+      true
+    else 
+      false
+    end
   end
 end
