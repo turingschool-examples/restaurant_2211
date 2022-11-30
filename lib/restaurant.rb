@@ -30,5 +30,8 @@ class Restaurant
         @opening_time < "12:00"
    end
     
+   def menu_dish_names
+            dishes.map(&:upcase)
+    end
 
 end
