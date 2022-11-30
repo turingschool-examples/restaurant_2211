@@ -9,7 +9,7 @@
 
 ## Iteration 1
 
-For iteration 1, we have created all of the tests you will need - unskip tests one by one (remove or comment out the word `skip` at the top of each test), making each pass before moving on to the next test.  The tests will model the following interaction pattern:
+For iteration 1, we have created all of the tests you will need - unskip tests one by one (remove the `x` before the `it` keyword), making each pass before moving on to the next test.  The tests will model the following interaction pattern:
 
 ```ruby
 pry(main)> require './lib/restaurant'
@@ -60,7 +60,9 @@ pry(main)> restaurant2.dishes
 
 ## Iteration 3
 
-Now, it is time for you to write your own tests!  Follow the interaction pattern below to write one test, make that test pass, and move on to the next test.  You will have at minimum, one test per new method. A restaurant is open for lunch, if its opening time is before 12:00.  All restaurants are **VERY** excited about their dishes - The method `menu_dish_names` will return a list of dish names, **IN ALL CAPS** ('Breakfast Burrito' should become 'BREAKFAST BURRITO').
+Now, it is time for you to write your own tests!  Follow the interaction pattern below to write one test, make that test pass, and move on to the next test.  You will have at minimum, one test per new method. 
+
+A restaurant is open for lunch, if its opening time is before 12:00.  All restaurants are **VERY** excited about their dishes - The method `menu_dish_names` will return a list of dish names, **IN ALL CAPS** ('Breakfast Burrito' should become 'BREAKFAST BURRITO').
 
 ```ruby
 require './lib/restaurant'
