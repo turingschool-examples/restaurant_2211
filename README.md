@@ -1,7 +1,7 @@
 ## Instructions
 
-* Fork this Repository
-* Clone your forked repo
+* √ Fork this Repository
+* √ Clone your forked repo
 * Complete the activity Below
 * Push your solution to your repo
 * Submit a Pull Request from your repo to this repo
