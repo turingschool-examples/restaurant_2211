@@ -1,6 +1,8 @@
 class Restaurant
-  def initialize(opening_time, restaurant)
+    attr_reader :opening_time, :name
+
+  def initialize(opening_time, name)
     @opening_time = opening_time
-    @restaurant = restaurant
+    @name = name
   end
 end
