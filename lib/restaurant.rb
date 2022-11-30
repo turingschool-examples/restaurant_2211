@@ -16,4 +16,8 @@ class Restaurant
     @dishes << dish 
   end
 
+  def open_for_lunch
+    @open_time.to_i < 12
+  end
+
 end
