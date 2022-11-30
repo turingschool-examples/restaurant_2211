@@ -9,7 +9,7 @@ attr_reader :name, :opening_time, :dishes, :closing_time
 
   def closing_time(hours_after_opening_time)
     new_time = @opening_time.chop.chop.chop.to_i + hours_after_opening_time
-    return "#{new_time}:00"
+    "#{new_time}:00"
   end
 
   def add_dish(dish)
@@ -23,7 +23,7 @@ attr_reader :name, :opening_time, :dishes, :closing_time
   def menu_dish_names
     menu = []
     @dishes.each {|dish| menu << dish.upcase}
-    return menu 
+    menu 
   end
 
   def announce_closing_time(hours_after_opening_time)
@@ -32,6 +32,6 @@ attr_reader :name, :opening_time, :dishes, :closing_time
     closing_time >= 12 ? am_or_pm = "PM" : am_or_pm = "AM"
     closing_time > 12 ? closing_time = closing_time - 12 : closing_time
 
-    return "#{@name} will be closing at #{closing_time}:00#{am_or_pm}"
+    "#{@name} will be closing at #{closing_time}:00#{am_or_pm}"
   end
 end
