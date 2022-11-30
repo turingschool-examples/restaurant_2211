@@ -31,7 +31,7 @@ RSpec.describe Restaurant do
       expect(@restaurant1.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
 
-    xit 'can add dishes' do
+    it 'can add dishes' do
       restaurant = Restaurant.new('10:00', 'Fuel Cafe')
       
       restaurant.add_dish('Burrata')
