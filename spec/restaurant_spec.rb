@@ -37,6 +37,9 @@ RSpec.describe Restaurant do
   end
 
   describe 'Iteration 3' do
-  
+    it 'checks if open for lunch' do
+      restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+      expect(restaurant.open_for_lunch?).to eq(true)
+   end
   end
 end
