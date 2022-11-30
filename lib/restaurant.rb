@@ -22,8 +22,16 @@ class Restaurant
     def menu_dish_names
         dishes.map do |dish|
             dish.upcase 
-            require 'pry'; binding.pry
         end
     end
+
+    def announce_closing_time(hour)
+        if @opening_time.to_i + hour < 12
+            "Fuel Cafe will be closing at #{@opening_time.to_i + hour}:00AM"
+        elsif @opening_time.to_i + hour > 12
+            "Il Posto will be closing at #{@opening_time.to_i + hour - 12}:00PM" 
+        end
+    end
+
     
 end
