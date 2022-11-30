@@ -59,3 +59,21 @@
 
 # p restaurant2.menu_dish_names
 # puts
+
+###############################
+#### Iteration 4
+###############################
+# require './lib/restaurant'
+
+# restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+# p restaurant1
+
+# restaurant2 = Restaurant.new('16:00', 'Il Poggio')
+# p restaurant2
+# puts
+
+# p restaurant1.announce_closing_time(5)
+# puts
+
+# p restaurant2.announce_closing_time(7)
+# puts
