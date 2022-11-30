@@ -1,3 +1,3 @@
 class Restaurant
-  
+  test
 end
