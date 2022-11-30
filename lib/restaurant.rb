@@ -7,4 +7,8 @@ class Restaurant
     @dishes = []
   end
 
+  def closing_time(hours_open)
+    (@opening_time.to_i + hours_open).to_s.concat(":00")
+  end
+
 end
