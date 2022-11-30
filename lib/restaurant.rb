@@ -12,12 +12,7 @@ class Restaurant
     end 
 
     def closing_time(time)
-        integer = opening_time.delete(":")
-        time_as_s = integer.chomp('00')
-        time_as_i = time_as_s.to_i
-        closing_time = time_as_i+time 
-        closing_time_s = closing_time.to_s
-        @closing_time = closing_time_s.concat(":00")
+        @closing_time = (((opening_time.to_i)+time).to_s).concat(":00")
 
     end 
 
