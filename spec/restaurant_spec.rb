@@ -46,7 +46,17 @@ RSpec.describe Restaurant do
 
       expect(restaurant1.open_for_lunch?).to eq (true)
       expect(restaurant2.open_for_lunch?).to eq (false)
-      require 'pry'; binding.pry
     end
+
+    it 'can add uppercase dish names' do
+      restaurant2 = Restaurant.new('16:00', 'Il Posto')
+
+      restaurant2.add_dish('Burrata')
+      restaurant2.add_dish('Pizzetta')
+      restaurant2.add_dish('Ravioli')
+      
+      expect(restaurant2.menu_dish_names).to eq(["BURRATA", "PIZZETTA", "RAVIOLI"])
+    end
+
   end
 end
