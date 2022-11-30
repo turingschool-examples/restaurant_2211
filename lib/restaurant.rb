@@ -17,5 +17,11 @@ class Restaurant
         @dishes << dish
     end
 
-  
+    def open_for_lunch
+        if opening_time == "12:00"
+            @dishes.map do |dish|
+                dish.upcase
+            end
+        end
+    end
 end
