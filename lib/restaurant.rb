@@ -27,14 +27,20 @@ class Restaurant
     end
   end
 
-  # def announce_closing_time(hours)
-  #   time = (@opening_time.to_i + hours).to_s + ':00'
-  #     if time.to_i > 12
-  #       time.to_i - 12 == time.to_s + 'PM'
-  #     else
-  #       time.to_i < 12
-  #       time.to_i - 12 == time.to_s + 'AM'
-  #     end
-  #   "#{@name} will be closing at #{time}"
-  # end
+  def announce_closing_time(hours)
+    time = (@opening_time.to_i + hours).to_s + ':00'
+      t = Time 
+      if t = (0100..1200) 
+        "#{@name} will be closing at #{time}AM"
+      else t = (1201..1159)
+        standard_t = t.subtract(12)
+        "#{@name} will be closing at #{standard_t}PM"
+      end
+  end
 end
+
+# if time.to_i > 12
+#   time.to_i - 12  time.to_s + 'PM'
+# else
+#   time.to_i < 12
+#   time.to_i - 12  time.to_s + 'AM'
