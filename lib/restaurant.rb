@@ -12,4 +12,8 @@ class Restaurant
     "#{sum.to_s}:00"
   end
 
+  def add_dish()
+    @dishes << add_dish
+  end
+
 end
