@@ -1,5 +1,5 @@
 class Restaurant
-      attr_reader :opening_time, :name, :dishes
+    attr_reader :opening_time, :name, :dishes
 
   def initialize(opening_time, name)
     @opening_time = opening_time
@@ -25,4 +25,12 @@ class Restaurant
         false
     end
   end
+
+  def menu_dish_names
+    menu = []
+    @dishes.each do |dish|
+        menu << dish.upcase
+        end
+    menu
+    end
 end
