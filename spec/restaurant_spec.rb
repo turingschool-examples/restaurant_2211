@@ -54,4 +54,10 @@ RSpec.describe Restaurant do
       expect(restaurant2.dishes).to eq(['Burrata', 'Pizzetta', 'Ravioli'])
     end
   end
+
+  describe 'Iteration 3' do
+    it 'exists and has attributes' do
+      restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+    end
+  end
 end
