@@ -12,9 +12,13 @@ class Restaurant
     "#{sum.to_s}:00"
   end
 
-  def add_dish(dish)
-    @dishes << dish
-  end
+#   def add_dish(dish)
+#     @dishes << dish
+#   end
+
+    def add_dish(dish)
+        @dishes << dish.upcase
+    end
 
   def open_for_lunch?
     if opening_time.to_i < 12
@@ -23,6 +27,4 @@ class Restaurant
         false
     end
   end
-
-
 end
