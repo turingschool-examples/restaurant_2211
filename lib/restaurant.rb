@@ -6,4 +6,5 @@ class Restaurant
     @name = name
     @dishes = []
   end
+
 end
