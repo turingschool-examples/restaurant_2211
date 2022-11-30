@@ -20,4 +20,12 @@ class Restaurant
     @open_time.to_i < 12
   end
 
+  def menu_dish_names
+    all_cap_names = []
+    dishes.each do |dish|
+        all_cap_names << dish.upcase
+    end
+    all_cap_names
+  end
+
 end
